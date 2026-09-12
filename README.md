@@ -17,4 +17,26 @@ In digital system design, a **Binary to One-Hot Decoder** acts as an index trans
 
 ---
 
-## Block Diagram
+## Interface Specifications ($N = 8, M = 3$)
+
+| Port Name | Direction | Bit Width | Description |
+|---|---|---|---|
+| `bin_in` | Input | `2:0` ($M$ bits) | $M$-bit binary input value |
+| `one_hot_out` | Output | `7:0` ($N$ bits) | $N$-bit output vector with only one bit set high |
+
+---
+
+## Truth Table
+
+| `bin_in[2:0]` | Decimal | `one_hot_out[7:0]` |
+|:---:|:---:|:---:|
+| `3'b000` | 0 | `8'b0000_0001` |
+| `3'b001` | 1 | `8'b0000_0010` |
+| `3'b010` | 2 | `8'b0000_0100` |
+| `3'b011` | 3 | `8 me_hot_out = 8'b0000_1000` |
+| `3'b100` | 4 | `8'b0001_0000` |
+| `3'b101` | 5 | `8'b0010_0000` |
+| `3'b110` | 6 | `8'b0100_0000` |
+| `3'b111` | 7 | `8'b1000_0000` |
+
+---
